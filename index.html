@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alartek - Garrafa Térmica Premium</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <img src="/img/Captura de tela 2025-10-10 165016.png" alt="">
+        <div class="logo">ALARTEK</div>
+        <nav>
+            <a onclick="scrollToSection('hero')" href="">Início</a>
+            <a onclick="scrollToSection('product')">Compras</a>
+            <a href="saude.html">Saúde</a>
+            <a onclick="openModal('personalize')">Personalize</a>
+        </nav>
+        <div class="icons">
+            <svg class="icon" onclick="openModal('account')" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+            </svg>
+        </div>
+    </header>
+
+
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1>Garrafa Térmica Alartek Premium</h1>
+            <p>Mantenha suas bebidas na temperatura ideal por até 24 horas. Design moderno, tecnologia avançada e
+                durabilidade excepcional para acompanhar seu dia a dia.</p>
+            <p>Capacidade de 510ml • Aço inox • Isolamento térmico duplo • Livre de BPA</p>
+            <button class="btn" onclick="scrollToSection('product')">Conheça Agora</button>
+        </div>
+        <div class="hero-image">
+            <div class="product-showcase">
+                <img src="/img/garrafa-black-removebg-preview.png" alt="Garrafa Térmica Stanley" class="product-image">
+            </div>
+    </section>
+
+
+    <section class="product-section" id="product">
+        <h2 class="section-title">Garrafa Térmica Alartek 510ml</h2>
+        <div class="product-card">
+            <div class="product-showcase">
+                <img src="/img/garrafa-black-removebg-preview.png" alt="Garrafa Térmica Stanley" class="product-image">
+            </div>
+            <div class="product-details">
+                <h2>Garrafa Térmica Alartek</h2>
+                <div class="quantity-selector">
+                    <button class="quantity-btn" onclick="changeQuantity(-1)">-</button>
+                    <span class="quantity" id="quantity">1</span>
+                    <button class="quantity-btn" onclick="changeQuantity(1)">+</button>
+                </div>
+                <div class="price">R$ 89,90</div>
+                <div class="installments">ou em até 12x de R$ 7,49</div>
+                <button class="btn" onclick="alert('Produto adicionado ao carrinho!')">COMPRAR</button>
+                <button class="btn" onclick="openModal('personalize')"
+                    style="margin-left: 15px; background: linear-gradient(135deg, #9c27b0 0%, #7b1fa2 100%);">PERSONALIZAR</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="related-products">
+        <h3 class="related-title">Outros produtos que você pode gostar</h3>
+        <div class="related-grid">
+            <div class="related-item">
+                <img src="/img/garrafa-pink-removebg-preview.png" alt="Garrafa Classic 750ml">
+                <h4>Garrafa Térmica Alartek 750ml</h4>
+                <p>R$ 119,90</p>
+                <button class="btn">COMPRAR</button>
+            </div>
+            <div class="related-item">
+                <img src="/img/garrafa-yellow-removebg-preview.png" alt="Copo térmico 350ml">
+                <h4>Copo Térmico Alartek 350ml</h4>
+                <p>R$ 69,90</p>
+                <button class="btn">COMPRAR</button>
+            </div>
+            <div class="related-item">
+                <img src="img/garrafa-blue-removebg-preview.png" alt="Garrafa Kids 400ml">
+                <h4>Garrafa Térmica Alartek Kids 400ml</h4>
+                <p>R$ 79,90</p>
+                <button class="btn">COMPRAR</button>
+            </div>
+
+        </div>
+    </div>
+
+    <section class="features">
+        <h2 class="section-title">Por que escolher Alartek?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">❄️</div>
+                <h3>Isolamento Térmico</h3>
+                <p>Mantém bebidas geladas por 24h e quentes por 12h graças à tecnologia de parede dupla em aço inox.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>Sistema Anti-Vazamento</h3>
+                <p>Tampa com trava de segurança que garante zero vazamentos, perfeito para levar na bolsa ou mochila.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">♻️</div>
+                <h3>Sustentável</h3>
+                <p>Reduza o uso de garrafas plásticas descartáveis. Material 100% reciclável e livre de BPA.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Design Ergonômico</h3>
+                <p>Formato otimizado para segurar confortavelmente e caber em porta-copos de veículos.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal" id="accountModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('account')">&times;</span>
+            <h2>Criar uma Conta</h2>
+            <form>
+                <div class="form-group">
+                    <label>Nome de Usuário</label>
+                    <input type="text" placeholder="Seu nome">
+                </div>
+                <div class="form-group">
+                    <label>E-mail *</label>
+                    <input type="email" placeholder="seu@email.com">
+                </div>
+                <div class="form-group">
+                    <label>Senha</label>
+                    <input type="password" placeholder="••••••••">
+                </div>
+                <p style="color: #b0bec5; font-size: 14px; margin-bottom: 20px;">
+                    (Opcional) Toda hora tem mercado, e-mails com atualizações da Alartek, ofertas e ofertas especiais.
+                    Você pode mudar isso a qualquer momento.
+                </p>
+                <button type="submit" class="btn" style="width: 100%;">CONTINUAR</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="healthModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('health')">&times;</span>
+            <h2>Calculadora de Hidratação</h2>
+            <form onsubmit="calculateWater(event)">
+                <div class="form-group">
+                    <label>Gênero</label>
+                    <select id="gender">
+                        <option value="homem">Homem</option>
+                        <option value="mulher">Mulher</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Altura (cm)</label>
+                    <input type="number" id="height" placeholder="170">
+                </div>
+                <div class="form-group">
+                    <label>Peso (kg)</label>
+                    <input type="number" id="weight" placeholder="70">
+                </div>
+                <div class="form-group">
+                    <label>Idade (anos)</label>
+                    <input type="number" id="age" placeholder="30">
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">CALCULAR</button>
+            </form>
+            <div class="calculator-result" id="result" style="display: none;">
+                <h3 id="waterAmount"></h3>
+                <p id="bottlesAmount"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="personalizeModal" style="width: 100dvw;">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('personalize')">&times;</span>
+            <h2>Personalize sua Garrafa</h2>
+            <p style="text-align: center; color: #b0bec5; margin-bottom: 30px;">
+                Deixe sua garrafa única! Escolha uma das opções de personalização abaixo.
+            </p>
+            <div class="personalize-options">
+                <div class="personalize-card">
+                    <div style="font-size: 48px;">✏️</div>
+                    <h4>Gravação a Laser</h4>
+                    <p style="color: #b0bec5; margin-top: 10px;">Adicione seu nome ou frase</p>
+                </div>
+                <div class="personalize-card">
+                    <div style="font-size: 48px;">🎨</div>
+                    <h4>Design Exclusivo</h4>
+                    <p style="color: #b0bec5; margin-top: 10px;">Escolha um tema especial</p>
+                </div>
+                <div class="personalize-card">
+                    <div style="font-size: 48px;">🎁</div>
+                    <h4>Embalagem Presente</h4>
+                    <p style="color: #b0bec5; margin-top: 10px;">Perfeito para presentear</p>
+                </div>
+                <div class="personalize-card">
+                    <div style="font-size: 48px;">🏢</div>
+                    <h4>Logo Corporativo</h4>
+                    <p style="color: #b0bec5; margin-top: 10px;">Para sua empresa</p>
+                </div>
+            </div>
+            <p style="text-align: center; color: #64b5f6; margin-top: 30px; font-size: 18px;">
+                Prazo de entrega: + 5 dias úteis
+            </p>
+            <button class="btn" style="width: 100%; margin-top: 20px;"
+                onclick="alert('Entre em contato conosco para personalizar!')">SOLICITAR ORÇAMENTO</button>
+        </div>
+    </div>
+    <footer>A nossa missão é "incentivar hábitos saudáveis por meio da tecnologia, promovendo o bem estar das pessoas e
+        o cuidado com o bem ambiente"<br>
+
+        A nossa visão é" ser referência global em inovação sustentável, integrando tecnologia e saúde no dia a dia das
+        pessoas, com produtos que impactam positivamente a vida e o planeta"<br>
+
+        Valores<br> •Inovação<br> •Sustentabilidade<br> •Saúde<br> •Responsabilidade social<br> •Qualidade<br> © 2025 todos os Direitos reservados. <br>
+    </footer>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Hidratação | Alartek</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+  <!-- ======== CABEÇALHO ======== -->
+     <header>
+
+        <img src="/img/Captura de tela 2025-10-10 165016.png" alt="">
+        <div class="logo">ALARTEK</div>
+        <nav>
+            <a href="index.html">Início</a>
+            <a onclick="scrollToSection('product')" href="index.html">Compras</a>
+            <a href="saude.html">Saúde</a>
+            <a onclick="openModal('personalize')" href="index.html">Personalize</a>
+        </nav>
+        <div class="icons">
+            <svg class="icon" onclick="openModal('account')" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+            </svg>
+        </div>
+    </header>
+
+  <!-- ======== CONTEÚDO PRINCIPAL ======== -->
+  <div class="container">
+    <!-- LADO ESQUERDO: CALCULADORA -->
+    <div class="calculadora">
+      <h1>Calculadora de Hidratação</h1>
+
+      <div class="genero">
+        <button id="homem" class="ativo">Homem</button>
+        <button id="mulher">Mulher</button>
+      </div>
+
+      <label for="altura">Altura (cm)</label>
+      <input type="number" id="altura" placeholder="Ex: 170">
+
+      <label for="peso">Peso (kg)</label>
+      <input type="number" id="peso" placeholder="Ex: 70">
+
+      <label for="idade">Idade (anos)</label>
+      <input type="number" id="idade" placeholder="Ex: 30">
+
+      <button id="calcular" class="btn">CALCULAR</button>
+
+      <div class="resultado">
+        <h3>Você deve beber:</h3>
+        <p id="aguaResultado">—</p>
+      </div>
+    </div>
+
+    <!-- LADO DIREITO: INFORMAÇÕES -->
+    <div class="informacoes">
+      <h2>Por que a hidratação é importante?</h2>
+      <p>A água é essencial para o funcionamento do corpo humano. Ela regula a temperatura corporal, auxilia na digestão, transporte de nutrientes e na eliminação de toxinas.</p>
+
+      <h3>Dicas de hidratação:</h3>
+      <ul>
+        <li>Beba água ao acordar e antes das refeições.</li>
+        <li>Evite bebidas açucaradas.</li>
+        <li>Leve sempre uma garrafa com você.</li>
+        <li>Consuma frutas ricas em água (melancia, laranja, melão).</li>
+      </ul>
+
+      <p class="creditos">© 2025 Alartek</p>
+    </div>
+  </div>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="script2.js"></script>
+</body>
+</html>
