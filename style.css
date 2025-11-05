@@ -65,20 +65,21 @@ nav a:hover {
     transform: scale(1.1);
 }
 
-/* Hero Section */
 .hero {
-    margin-top: 80px;
+    margin-top: 80px; /* Ajuste para não sobrepor a navegação */
     padding: 100px 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     min-height: 90vh;
     background: linear-gradient(135deg, #1a2942 0%, #0a1628 100%);
+    position: relative;
 }
 
 .hero-content {
     flex: 1;
     max-width: 600px;
+    z-index: 10; /* Garante que o título fique acima da barra de navegação */
 }
 
 .hero-content h1 {
@@ -335,8 +336,10 @@ nav a:hover {
     border-radius: 30px;
     max-width: 500px;
     width: 90%;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
     position: relative;
+    overflow-y: auto;
+    max-height: 90vh; 
 }
 
 .modal-content h2 {
@@ -396,7 +399,7 @@ nav a:hover {
 }
 
 .personalize-card {
-    background: rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.05);
     padding: 30px;
     border-radius: 15px;
     text-align: center;
@@ -407,6 +410,10 @@ nav a:hover {
 .personalize-card:hover {
     background: rgba(100, 181, 246, 0.2);
     transform: scale(1.05);
+}
+
+.personalize-card div {
+    font-size: 48px;
 }
 
 .personalize-card h4 {
@@ -569,11 +576,16 @@ footer {
     }
 
     .hero-content h1 {
-        font-size: 42px;
+        font-size: 42px; 
     }
 
     .hero-content p {
         font-size: 18px;
+    }
+
+    .personalize-options {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
     }
 
     .product-card {
@@ -582,9 +594,39 @@ footer {
         padding: 40px;
     }
 
+    .modal-content {
+        padding: 30px;
+        width: 85%;
+        max-width: 400px;
+    }
+
+    .modal-content h2 {
+        font-size: 24px;
+    }
+
     .bottle-container {
         width: 300px;
         height: 300px;
+    }
+
+    .personalize-options {
+        grid-template-columns: 1fr;
+    }
+
+    .personalize-card {
+        padding: 20px;
+    }
+
+    .personalize-card div {
+        font-size: 36px;
+    }
+
+    .personalize-card h4 {
+        font-size: 16px;
+    }
+
+    .personalize-card p {
+        font-size: 13px;
     }
 
     .bottle {
@@ -599,13 +641,61 @@ footer {
     .feature-card {
         padding: 30px;
     }
+
+    .btn {
+        font-size: 16px;
+        padding: 14px 25px;
+    }
 }
+
 
 @media (max-width: 600px) {
     header {
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
+        padding: 5px;
+    }
+
+    .modal-content {
+        padding: 20px;
+        width: 90%;
+        max-width: 330px;
+        border-radius: 20px;
+    }
+
+    .modal-content h2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .personalize-options {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin: 15px 0;
+    }
+
+    .personalize-card {
         padding: 15px;
+        border-radius: 12px;
+    }
+
+    .personalize-card div {
+        font-size: 28px; /* Ícones menores */
+    }
+
+    .personalize-card h4 {
+        font-size: 15px;
+        margin-top: 10px;
+    }
+
+    .personalize-card p {
+        font-size: 12px;
+        margin-top: 5px;
+    }
+
+    .modal-content p {
+        font-size: 13px;
+        line-height: 1.4;
     }
     
     footer {
@@ -628,4 +718,10 @@ footer {
         padding: 8px 15px;
         font-size: 14px;
     }
+
+    .btn {
+        font-size: 14px;
+        padding: 12px 20px;
+    }
+    
 }
