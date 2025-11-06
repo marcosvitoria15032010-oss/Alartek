@@ -326,4 +326,35 @@ input {
     font-size: 0.8rem;
     margin-top: 15px;
   }
+}/* ====== CORREÇÃO DO BOTÃO CORTADO ====== */
+@media (max-width: 600px) {
+  /* aumenta o espaçamento do topo para compensar o header fixo */
+  .container {
+    margin-top: 10rem; /* antes estava 7rem */
+  }
+
+  /* garante que a calculadora ocupe toda a largura visível */
+  .calculadora {
+    padding-top: 35px; /* mais respiro acima dos botões */
+  }
+
+  /* melhora a área dos botões de gênero */
+  .genero {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .genero button {
+    width: 100%;
+    padding: 14px;
+    font-size: 15px;
+  }
 }
+
+/* ====== Também garanta espaço suficiente no tablet ====== */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .container {
+    margin-top: 9rem;
+  }
+}
+
