@@ -357,4 +357,10 @@ input {
     margin-top: 9rem;
   }
 }
+/* ====== Oculta o título apenas em telas mobile ====== */
+@media (max-width: 600px) {
+  .calculadora h1 {
+    display: none;
+  }
+}
 
