@@ -725,3 +725,155 @@ footer {
     }
     
 }
+/* ======== Ajuste de espaçamento entre botões no mobile ======== */
+@media (max-width: 768px) {
+  .product-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-details .btn {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px 0; /* Espaço entre os botões */
+  }
+
+  .quantity-selector {
+    justify-content: center;
+  }
+
+  .product-card {
+    padding: 30px;
+  }
+}
+/* ======== Responsividade da Calculadora de Hidratação ======== */
+
+/* Layout padrão desktop */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  padding: 100px 80px;
+  margin-top: 100px;
+}
+
+/* Colunas da calculadora */
+.calculadora {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.informacoes {
+  flex: 1;
+  color: #b0bec5;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.informacoes h2,
+.informacoes h3 {
+  color: #64b5f6;
+}
+
+/* ======== Tablet ======== */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 40px;
+    gap: 60px;
+  }
+
+  .calculadora, .informacoes {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  header nav a {
+    font-size: 16px;
+  }
+
+  header img {
+    width: 80px;
+  }
+
+  .calculadora h1 {
+    font-size: 32px;
+  }
+}
+
+/* ======== Mobile ======== */
+@media (max-width: 600px) {
+  .container {
+    padding: 60px 20px;
+  }
+
+  .calculadora {
+    padding: 25px;
+  }
+
+  .calculadora h1 {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .genero {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .genero button {
+    flex: 1;
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  input {
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+  }
+
+  .resultado h3 {
+    font-size: 18px;
+  }
+
+  .informacoes {
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .informacoes ul {
+    padding-left: 0;
+    list-style-position: inside;
+  }
+
+  .informacoes h2 {
+    font-size: 22px;
+  }
+
+  .informacoes h3 {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+}
+header nav {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+header nav a {
+  font-size: 14px;
+}

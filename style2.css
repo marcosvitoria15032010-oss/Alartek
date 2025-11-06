@@ -1,70 +1,71 @@
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    body {
-        font-family: 'Arial', sans-serif;
-        background: #0a1628;
-        color: #fff;
-        overflow-x: hidden;
-    }
-    
+/* ====== RESET ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    header {
-        background: #072238;
-        padding: 0px 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: fixed;
-        width: 100%;
-        top: 0;
-        z-index: 1000;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-    }
-    
-    .logo {
-        font-size: 32px;
-        font-weight: bold;
-        letter-spacing: 2px;
-        color: #faf8cc;
-    }
-    
-    nav {
-        display: flex;
-        gap: 40px;
-        align-items: center;
-    }
-    
-    nav a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 18px;
-        transition: color 0.3s;
-        cursor: pointer;
-    }
-    
-    nav a:hover {
-        color: #64b5f6;
-    }
-    
-    .icons {
-        display: flex;
-        gap: 20px;
-    }
-    
-    .icon {
-        width: 30px;
-        height: 30px;
-        cursor: pointer;
-        transition: transform 0.3s;
-    }
-    
-    .icon:hover {
-        transform: scale(1.1);
-    }
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0a1628;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* ====== HEADER ====== */
+header {
+  background: #072238;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #faf8cc;
+}
+
+nav {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+nav a:hover {
+  color: #64b5f6;
+}
+
+.icons {
+  display: flex;
+  gap: 20px;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
 
 /* ====== LAYOUT PRINCIPAL ====== */
 body {
@@ -106,10 +107,11 @@ body {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+  gap: 10px;
 }
 
 .genero button {
-  width: 48%;
+  flex: 1;
   padding: 10px;
   border: none;
   border-radius: 8px;
@@ -215,4 +217,113 @@ input {
   margin-top: 20px;
   color: #333;
   text-align: center;
+}
+
+/* ====== RESPONSIVIDADE ====== */
+
+/* Tablets (até 1024px) */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    width: 95%;
+    margin: 8rem auto;
+  }
+
+  .calculadora, 
+  .informacoes {
+    width: 100%;
+    padding: 35px;
+  }
+
+  .calculadora h1 {
+    font-size: 1.4rem;
+  }
+
+  .informacoes h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Celulares (até 600px) */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  .container {
+    flex-direction: column;
+    width: 95%;
+    margin: 7rem auto;
+    border-radius: 15px;
+  }
+
+  .calculadora, 
+  .informacoes {
+    padding: 25px;
+  }
+
+  .calculadora h1 {
+    font-size: 1.3rem;
+  }
+
+  .genero {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .genero button {
+    width: 100%;
+    padding: 12px;
+  }
+
+  label {
+    font-size: 13px;
+  }
+
+  input {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 14px;
+    padding: 14px;
+  }
+
+  .resultado p {
+    font-size: 1.4rem;
+  }
+
+  .informacoes {
+    text-align: center;
+    font-size: 15px;
+  }
+
+  .informacoes h2 {
+    font-size: 1.2rem;
+  }
+
+  .informacoes ul {
+    list-style-position: inside;
+    padding-left: 0;
+  }
+
+  .creditos {
+    font-size: 0.8rem;
+    margin-top: 15px;
+  }
 }
